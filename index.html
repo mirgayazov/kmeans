@@ -6,38 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Document</title>
+    <title>Fisher's irises</title>
 </head>
 
 <body>
-    <div style="margin: 0px 20px 20px 20px; width: 90%;">
-        <canvas id="myChart"></canvas>
-    </div>
-    <script src="./data.js"></script>
-    <script>
-        const data = {
-            datasets: _data.data
-        };
+<div style="margin: 0px 20px 20px 20px; width: 90%;">
+    <canvas id="myChart"></canvas>
+</div>
+<script src="./data.js"></script>
+<script>
+    const data = {
+        datasets: _data.data
+    };
 
-        const config = {
-            type: 'scatter',
-            data: data,
-            options: {
-                scales: {
-                    x: {
-                        type: 'linear',
-                        position: 'bottom'
-                    }
+    const config = {
+        type: 'scatter',
+        data: data,
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
                 }
             }
-        };
-        // === include 'setup' then 'config' above ===
-
-        var myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
-    </script>
+        }
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
 </body>
 
 </html>
